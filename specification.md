@@ -15,7 +15,7 @@ The Open Transformer Specification (OTS) is a specification aimed at enabling th
 ## High-Level Architecture
 OTS consists of three main components:
 
-**Data Format Specification**: Defines the structure and contents of data that can be ingested by LLM transformers.
+**Data format specification**: Defines the structure and contents of data that can be ingested by LLM transformers.
 
 **API and SDK**: Provides a set of APIs and SDKs that LLM transformer implementations should follow to enable seamless integration.
 
