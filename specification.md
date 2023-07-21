@@ -15,13 +15,13 @@ The Open Transformer Specification (OTS) is a specification aimed at enabling th
 ## High-Level Architecture
 OTS consists of three main components:
 
-**Data format specification**: Defines the structure and contents of data that can be ingested by LLM transformers.
+**Data Format Specification**: Defines the structure and contents of data that can be ingested by LLM transformers.
 
 **API and SDK**: Provides a set of APIs and SDKs that LLM transformer implementations should follow to enable seamless integration.
 
 **Data Collector**: An optional component that can be implemented to receive, process, and distribute data to LLM transformers. Thus enabling existing LLMs to adopt OTS simply by implementing custom exporters that target their architecture.
 
-## Data Format Specification
+### Data Format Specification
 The data format for OTS is based on JSON, making it easy to read, parse, and manipulate. The specification outlines the following data fields:
 
 **timestamp**: A timestamp representing the moment when the data was generated or received.
@@ -38,7 +38,7 @@ The data format for OTS is based on JSON, making it easy to read, parse, and man
 
 **metadata (optional)**: Additional metadata about the data record or the transformer state.
 
-## API and SDK
+### API and SDK
 LLM transformers conforming to the OTS standard must implement the following APIs:
 
 **ingest_data(data: JSON)**: This API is responsible for receiving data in the JSON format, as specified in the OTS standard.
@@ -47,8 +47,8 @@ LLM transformers conforming to the OTS standard must implement the following API
 
 **get_transformer_state() -> JSON**: This API enables external systems to query the current state of the LLM transformer.
 
-## Data Collector (Optional)
-For more complex use cases and to centralize data management, a Data Collector component can be implemented. The Data Collector is responsible for receiving data from multiple sources, batching it and exporting it to one or more LLM transformers.
+### Data Collector (Optional)
+For more complex use cases and to centralize data management, a Data Collector component can be implemented. The Data Collector is responsible for receiving data from multiple sources, process it for various purposes (anti-entropy, record revanue sharing, etc) and exporting it to one or more LLM transformers.
 
 ## Conclusion
 The Open Transformer Specification (OTS) aims to streamline data ingestion for Large Language Model transformers by providing a common data format, APIs, and SDKs. OTS promotes interoperability and extensibility, providing a solid foundation for the LLM transformer ecosystem.
