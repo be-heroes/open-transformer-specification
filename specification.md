@@ -28,7 +28,7 @@ The data format for OTS is based on JSON, making it easy to read, parse, and man
 
 **did**: A unique identifier for the data record.
 
-**bid**: A unique identifier for the actor providing claiming ownership of the data record.
+**bid**: A unique identifier for the actor claiming ownership of the data record.
 
 **trace_id (optional)**: A unique identifier representing a collection (or batch) of related data records, enabling distributed tracing and efficient batch processing.
 
